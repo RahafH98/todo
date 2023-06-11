@@ -21,3 +21,41 @@ if (!skipMessage){
         alert("Welcome Ms " + userName);
     }
 }
+
+
+// lab 06 solution 
+
+const questions = ["Do you like coding?", "Is Java Script coding fun ?", "Do you like  to challange yourself?"];
+const answers = [];
+
+//function 1
+function pushQustionsToArray(){
+
+    for (let i = 0; i <questions.length; i++){
+        var answer = prompt(questions[i] + " answer with Yes|No");
+        if (answer.toLowerCase !== "Yes" && answer.toLowerCase !== "No" && answer =="") {
+            answer = "invalid";
+        }
+        answers.push(answer);
+    }
+
+}
+
+//function 2 (Traverse)
+function print(){
+    for (let i = 0; i < answers.length; i++) {
+        console.log(answers[i]);
+    }
+    // console.log(answers);
+}
+
+pushQustionsToArray();
+print();
+
+if(gender === "male"){
+    alert("Welcome Mr " + userName);
+    alert("Welcome Mr " + userName + " Thanks for answering, have a good day!");
+}else if(gender === "female"){
+    alert("Welcome Ms " + userName);
+    alert("Welcome Ms " + userName + " Thanks for answering, have a good day!");
+}
